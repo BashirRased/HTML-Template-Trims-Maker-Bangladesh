@@ -1,0 +1,1035 @@
+/**
+  
+* Template Name: 
+* Version: 
+* Author: Bashir Rased
+* Author URL: www.bashir-rased.com
+* Email: info@bashir-rased.com
+
+**/
+
+/*=============================
+Table of CSS Content Start Here
+===============================
+	01. Reset
+    02. Common Classes
+    03. Header Area
+        3.1 Header Top Area
+        3.2 Header Company Title
+        3.3 Header Menu
+        3.4 Header Slider
+            3.4.1 Header Slider with owl.carousel
+    04. Breadcrumbs
+    05. Our Client
+    06. Footer
+    07. Scroll To Top
+=============================
+Table of CSS Content End Here
+===========================*/
+
+/*======================
+01. Reset CSS Start Here
+======================*/
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    word-break: break-all;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    color: #232323;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+}
+
+section {
+    padding: 70px 0;
+}
+
+/*====================
+01. Reset CSS End Here
+====================*/
+/*===============================
+02. Common Classes CSS Start Here
+===============================*/
+.tmb-color,
+.tmb-color-hover:hover {
+    color: #00a651 !important;
+}
+
+.tmb-bg,
+.tmb-bg-hover:hover {
+    background-color: #00a651 !important;
+}
+
+.tmb-border {
+    border-color: #00a651 !important;
+}
+
+.tmb-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 0 10px 10px 0;
+    text-transform: capitalize;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.tmb-btn-default {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.tmb-btn-default:hover {
+    color: #ffffff;
+    border: 2px solid #00a651;
+    background-color: #00a651 !important;
+}
+
+.tmb-btn-contact {
+    color: #232323;
+    border: 1px solid #00a651;
+}
+
+.tmb-btn-contact:hover {
+    color: #ffffff;
+    background-color: #00a651;
+}
+
+.tmb-text-bold {
+    font-weight: 700;
+}
+
+.tmb-inner-section-header,
+.tmb-outer-section-header {
+    position: relative;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.tmb-inner-section-header h1 {
+    position: absolute;
+    top: -60px;
+    font-size: 65px;
+    width: 100%;
+    text-transform: capitalize;
+    color: #edeff2;
+}
+
+.tmb-inner-section-header h2,
+.tmb-outer-section-header h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 45px;
+    text-transform: capitalize;
+}
+
+.tmb-inner-section-header h2:before,
+.tmb-inner-section-header h2:after,
+.tmb-outer-section-header h2:before,
+.tmb-outer-section-header h2:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.tmb-inner-section-header h2:before,
+.tmb-outer-section-header h2:before {
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #232323;
+}
+
+.tmb-inner-section-header h2:after,
+.tmb-outer-section-header h2:after {
+    bottom: -7px;
+    width: 50%;
+    height: 6px;
+    background-color: #00a651;
+}
+
+.tmb-outer-section-header p {
+    font-weight: 700;
+    color: #ed1c24;
+    margin: 0;
+}
+
+/*=============================
+02. Common Classes CSS End Here
+=============================*/
+/*===============================
+03. Preloader Area CSS Start Here
+===============================*/
+.tmb-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 999999;
+    background-color: #ffffff;
+}
+
+.tmb-preloader.tmb-preloader-loading-end {
+    display: none;
+}
+
+.tmb-preloader-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 220px;
+}
+
+.tmb-preloader-inner {
+    width: 250px;
+    padding: 20px;
+    position: relative;
+}
+
+.tmb-preloader-rotate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #eef2f5;
+    border-bottom: 5px solid #00a651;
+    border-radius: 50%;
+}
+
+.tmb-preloader-rotate {
+    -webkit-animation: tmb-preloader-cubeDelay 1.3s infinitet linear;
+    animation: tmb-preloader-cubeDelay 1.3s infinite linear;
+}
+
+@-webkit-keyframes tmb-preloader-cubeDelay {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes tmb-preloader-cubeDelay {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/*=============================
+03. Preloader Area CSS End Here
+=============================*/
+/*============================
+03. Header Area CSS Start Here
+============================*/
+.tmb-header-top-area {
+    background-color: #ed1c24;
+    color: #ffffff;
+}
+
+/* 3.1 Header Top Area CSS Start Here */
+.tmb-header-top-left ul li,
+.tmb-header-top-right ul li {
+    display: inline-block;
+    padding: 5px 0;
+    margin: 0 5px 0 0;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.tmb-header-top-right ul li a {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    font-size: 14px;
+    text-align: center;
+    background-color: transparent;
+    color: #ffffff;
+    border-radius: 50%;
+    -webkit-transition: background-color 0.4s;
+    transition: background-color 0.4s;
+}
+
+.tmb-header-top-icon {
+    margin-right: 3px;
+}
+
+/* 3.1 Header Top Area CSS End Here */
+/* 3.2 Header Company Title CSS Start Here */
+.tmb-header-logo-img,
+.tmb-header-logo-title {
+    float: left;
+}
+
+.tmb-header-logo-img {
+    padding: 20px 20px 20px 0;
+}
+
+.tmb-header-logo-img img {
+    height: 135px;
+}
+
+.tmb-header-logo-title {
+    padding: 20px 0;
+}
+
+.tmb-header-logo-title h1 {
+    font-size: 36px;
+}
+
+.tmb-header-logo-title h1 a {
+    text-decoration: none;
+}
+
+.tmb-header-logo-title p {
+    font-size: 18px;
+}
+
+.tmb-header-company-title-area-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.tmb-company-location-icon i {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 30px;
+    text-align: center;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+    margin: 47px 0;
+    cursor: pointer;
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.tmb-company-location-icon i:hover {
+    color: #ffffff !important;
+}
+
+.tmb-company-location-text {
+    padding-left: 10px;
+}
+
+.tmb-company-location-text h4 {
+    font-size: 20px;
+    margin: 30px 0 10px 0;
+}
+
+.tmb-company-location-text p {
+    font-size: 14px;
+}
+
+/* 3.2 Header Company Title CSS End Here */
+/* 3.3 Header Menu CSS Start Here */
+.tmb-header-menu {
+    background-color: #ed1c24;
+}
+
+.mobile-header-menu {
+    display: none;
+    overflow: hidden;
+}
+
+.mobile-header-menu .mobile-header-menu-icon {
+    float: right;
+    padding: 10px;
+    margin: 10px;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.desktop-header-menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.desktop-header-menu ul > li {
+    float: left;
+    padding: 10px 30px;
+}
+
+.desktop-header-menu ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #ffffff;
+}
+
+.desktop-header-menu ul li.has-submenu {
+    position: relative;
+}
+
+.desktop-header-menu ul li.has-submenu a {
+    margin-right: 5px;
+}
+
+.desktop-header-menu ul li.has-submenu ul.submenu li {
+    float: none;
+    width: 100%;
+    border-bottom: 1px solid #ed1c24;
+}
+
+.desktop-header-menu ul li.has-submenu ul.submenu li:last-child {
+    border-bottom: none;
+}
+
+.desktop-header-menu ul li.has-submenu ul.submenu li a {
+    color: #232323;
+}
+
+.desktop-header-menu ul li.has-submenu ul.submenu li:hover a {
+    color: #ffffff;
+}
+
+.desktop-header-menu ul li.has-submenu span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    z-index: 99;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* 3.3 Header Menu CSS End Here */
+
+/* 3.4 Header Slider CSS Start Here */
+.single-slider-area {
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.single-slider-area:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.single-slider-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 60px 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.single-slider-content h1 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* 3.4.1 Header Slider with owl.carousel CSS Start Here */
+.tmb-header-slider.owl-theme .owl-nav .owl-prev,
+.tmb-header-slider.owl-theme .owl-nav .owl-next {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(50%);
+    transform: translateY(50%);
+    margin-top: -70px;
+    background-color: transparent;
+    color: #fffa00;
+    border: 1px solid #fffa00;
+    border-radius: 0;
+    -webkit-transition: background-color 0.4s, color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.tmb-header-slider.owl-theme .owl-nav .owl-prev:hover,
+.tmb-header-slider.owl-theme .owl-nav .owl-next:hover {
+    background-color: #fffa00;
+    color: #232323;
+}
+
+.tmb-header-slider.owl-theme .owl-nav .owl-prev {
+    left: 20px;
+}
+
+.tmb-header-slider.owl-theme .owl-nav .owl-next {
+    right: 20px;
+}
+
+.tmb-header-slider.owl-theme .owl-nav .owl-prev i,
+.tmb-header-slider.owl-theme .owl-nav .owl-next i {
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+.tmb-header-slider.owl-theme .owl-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.tmb-header-slider.owl-theme .owl-dots .owl-dot span {
+    width: 14px;
+    height: 14px;
+    background-color: #fffa00;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+}
+
+.tmb-header-slider.owl-theme .owl-dots .owl-dot.active span {
+    background-color: transparent;
+    border: 2px solid #fffa00;
+}
+
+/* 3.4.1 Header Slider with owl.carousel CSS End Here */
+
+/* 3.4 Header Slider CSS End Here */
+
+/*==========================
+03. Header Area CSS End Here
+==========================*/
+
+/*=================================
+04. Breadcrumbs Area CSS Start Here
+=================================*/
+#tmb-breadcrumbs {
+    background-color: #fffa00;
+    padding: 10px 0;
+    margin: 20px 0;
+}
+
+#tmb-breadcrumbs ul li {
+    display: inline-block;
+    margin-right: 10px;
+    color: #232323;
+}
+
+#tmb-breadcrumbs ul li a {
+    text-decoration: none;
+    color: #00a651;
+}
+
+#tmb-breadcrumbs ul li i {
+    color: #00a651;
+}
+
+/*===============================
+04. Breadcrumbs Area CSS End Here
+===============================*/
+/*=================================
+05. Page Content Area CSS Start Here
+=================================*/
+#tmb-page-content {
+    background-color: #eef2f5;
+}
+
+.tmb-page-content-inner {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px 0;
+    position: relative;
+}
+
+.tmb-page-content-table {
+    margin-top: 20px;
+}
+
+.table .thead-dark th {
+    background-color: #00a651;
+    border-color: #00a651;
+    font-size: 22px;
+}
+
+.table-bordered td,
+.table-bordered th {
+    border: 1px solid #00a651;
+}
+
+.tmb-page-content-thumbnail img {
+    width: 100%;
+}
+
+.tmb-page-content-desc h2 {
+    font-size: 42px;
+    margin: 30px 0;
+}
+
+.tmb-page-content-desc p {
+    font-size: 20px;
+}
+
+.tmb-page-content-desc h4 {
+    display: inline-block;
+    padding: 5px 20px;
+    border: 1px solid #00a651;
+    background-color: #00a651;
+    color: #ffffff;
+    text-transform: capitalize;
+    border-radius: 30px;
+}
+
+.tmb-page-content-desc p.text-highlight {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 30px 0;
+    line-height: 50px;
+}
+
+.tmb-page-content-desc h4 {
+    font-size: 30px;
+}
+
+.tmb-page-content-desc h6 {
+    font-size: 26px;
+}
+
+.tmb-page-content-desc li {
+    font-size: 26px;
+    margin-left: 40px;
+    padding-left: 40px;
+    position: relative;
+    display: block;
+}
+
+.tmb-page-content-desc li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    width: 15px;
+    height: 15px;
+    border: 1px solid #00a651;
+    background: #ed1c24 content-box;
+    padding: 3px;
+}
+
+.tmb-client-page-img-area .col-sm-3 {
+    border-right: 2px solid #eef2f5;
+    border-top: 2px solid #eef2f5;
+    cursor: pointer;
+    padding: 15px;
+}
+
+.tmb-client-page-img-area .col-sm-3:nth-child(4n+0) {
+    border-right: none;
+}
+
+.tmb-client-page-img-area .col-sm-3:nth-child(1),
+.tmb-client-page-img-area .col-sm-3:nth-child(2),
+.tmb-client-page-img-area .col-sm-3:nth-child(3),
+.tmb-client-page-img-area .col-sm-3:nth-child(4) {
+    border-top: none;
+}
+
+.tmb-client-page-img-area .col-sm-3:hover {
+    -webkit-box-shadow: 0 0 5px 5px #eef2f5;
+    box-shadow: 0 0 5px 5px #eef2f5;
+}
+
+.tmb-single-client-page-img {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.tmb-contact-page-left h4,
+.tmb-contact-page-right h4 {
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.tmb-contact-page-left h4:after,
+.tmb-contact-page-right h4:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50%;
+    height: 3px;
+    background-color: #00a651;
+}
+
+.tmb-contact-page-left .form-control {
+    border-radius: 0 !important;
+    border: 1px solid #00a651 !important;
+}
+
+.tmb-contact-page-left .form-control:focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #ed1c24 !important;
+}
+
+.tmb-contact-page-right-item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tmb-contact-page-right-item-icon,
+.tmb-contact-page-right-item-text {
+    float: left;
+}
+
+.tmb-contact-page-right-item-icon {
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border: 1px solid #00a651;
+    border-radius: 50%;
+    color: #00a651;
+    font-size: 25px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.tmb-contact-page-right-item-icon:hover {
+    color: #ffffff;
+    background-color: #00a651;
+}
+
+.tmb-contact-page-right-item-text {
+    font-size: 18px;
+}
+
+#tmb-google-map {
+    margin-top: 60px;
+    height: 600px;
+}
+
+.tmb-product-page-menu ul {
+    text-align: center;
+}
+
+.tmb-product-page-menu ul li {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: 1px solid #232323;
+    color: #232323;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.tmb-product-page-menu ul li:hover,
+.tmb-product-page-menu ul .tmb-filter-active {
+    color: #ffffff;
+    border: 1px solid #00a651;
+    background-color: #00a651;
+}
+
+.tmb-single-product-area {
+    margin: 50px 0;
+    position: relative;
+}
+
+.tmb-page-content-inner:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.tmb-single-product {
+    position: relative;
+    border: 1px solid #00a651;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.tmb-single-product img {
+    width: 100%;
+}
+
+.tmb-single-product .tmb-single-product-hover-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    color: #00a651;
+    font-size: 30px;
+    z-index: 1;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.tmb-single-product .tmb-single-product-title-area {
+    position: relative;
+    background-color: #00a651;
+    z-index: 1;
+    padding: 15px;
+}
+
+.tmb-single-product .tmb-single-product-title-area h4 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.tmb-single-product .tmb-single-product-title-area h4 a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.tmb-single-product .tmb-single-product-title-area:after {
+    content: "";
+    position: absolute;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-bottom: 11px solid #00a651;
+    top: -10px;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+
+.tmb-single-product:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.tmb-single-product:hover:after,
+.tmb-single-product:hover .tmb-single-product-hover-icon {
+    opacity: 1;
+}
+
+/*===============================
+05. Page Content Area CSS End Here
+===============================*/
+/*======================================
+04. About Us Section Area CSS Start Here
+======================================*/
+.tmb-about-us-content-left p {
+    font-size: 20px;
+}
+
+.tmb-about-us-content-right {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*====================================
+04. About Us Section Area CSS End Here
+====================================*/
+
+/*========================================
+05. Our Client Section Area CSS Start Here
+========================================*/
+#tmb-our-client-section {
+    background-color: #eef2f5;
+}
+
+.tmb-our-client-section-content-item {
+    height: 200px;
+    position: relative;
+}
+
+.tmb-our-client-section-content {
+    padding: 30px 0;
+}
+
+.tmb-our-client-section-content-item img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: auto !important;
+    height: auto !important;
+    max-height: 100% !important;
+    cursor: pointer;
+}
+
+/*======================================
+05. Our Client Section Area CSS End Here
+======================================*/
+
+/*============================
+06. Footer Area CSS Start Here
+============================*/
+#tmb-footer {
+    background-color: #ed1c24;
+    padding: 10px 0;
+}
+
+.tmb-copyright-text p {
+    margin: 0;
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+/*==========================
+06. Footer Area CSS End Here
+==========================*/
+
+/*===================================
+07. Scroll To Top Area CSS Start Here
+===================================*/
+#tmb-scroll-to-top {
+    position: fixed;
+    bottom: 38px;
+    right: 60px;
+    padding: 10px 6px;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    cursor: pointer;
+    z-index: 9999;
+    display: none;
+}
+
+#tmb-scroll-to-top a {
+    text-decoration: none;
+    text-transform: uppercase;
+    display: block;
+    color: #ffffff;
+}
+
+#tmb-scroll-to-top a span,
+#tmb-scroll-to-top a span i {
+    display: block;
+}
+
+.tmb-scroll-to-top-icon {
+    font-size: 15px;
+    margin-bottom: 15px;
+    text-align: center;
+    -webkit-animation: tmb-scroll-down 1s infinite;
+    animation: tmb-scroll-down 1s infinite;
+}
+
+@-webkit-keyframes tmb-scroll-down {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+@keyframes tmb-scroll-down {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+
+    50% {
+        -webkit-transform: translateY(10px);
+        transform: translateY(10px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+
+.tmb-scroll-to-top-text {
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/*=================================
+07. Scroll To Top Area CSS End Here
+=================================*/

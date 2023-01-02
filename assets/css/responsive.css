@@ -1,0 +1,214 @@
+/**
+  
+* Template Name: 
+* Version: 
+* Author: Bashir Rased
+* Author URL: www.bashir-rased.com
+* Email: info@bashir-rased.com
+
+**/
+
+/*=============================
+Table of CSS Content Start Here
+===============================
+	01. Extra Large devices (desktops, 993px)
+	02. Large devices (desktops, 992px and up)
+    03. Medium devices (tablets, 768px and up)
+    04. Small devices (landscape phones, 576px and up)
+=============================
+Table of CSS Content End Here
+===========================*/
+
+@media (min-width: 993px) {
+
+    .tmb-header-menu.tmb-sticky-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+    }
+
+    .desktop-header-menu {
+        display: block !important;
+    }
+
+    .desktop-header-menu ul li.has-submenu ul.submenu {
+        position: absolute;
+        top: 100%;
+        left: -9999px;
+        min-width: 250px;
+        background-color: #fffa00;
+        z-index: 999;
+    }
+
+    .desktop-header-menu ul li.has-submenu:hover ul.submenu {
+        left: 0;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+    .tmb-header-top-left,
+    .tmb-header-top-right {
+        text-align: center;
+    }
+
+    .tmb-header-top-right ul {
+        float: none !important;
+    }
+
+    .tmb-header-company-title-area-right {
+        display: none;
+    }
+
+    .mobile-header-menu {
+        display: block;
+    }
+
+    .desktop-header-menu {
+        display: none;
+    }
+
+    .desktop-header-menu ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    .desktop-header-menu ul li {
+        width: 100%;
+        padding: 0;
+    }
+
+    .desktop-header-menu ul li a {
+        display: block;
+        padding: 10px 15px;
+    }
+
+    .desktop-header-menu ul li.has-submenu ul.submenu {
+        display: none;
+        width: 100%;
+        background-color: #fffa00;
+    }
+
+    .desktop-header-menu ul li.has-submenu ul.submenu li a {
+        padding: 10px 30px;
+    }
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+
+    .tmb-header-logo-title {
+        padding: 46px 0;
+    }
+
+    .tmb-header-logo-title h1 {
+        font-size: 30px;
+    }
+
+    .tmb-header-logo-title p {
+        font-size: 15px;
+    }
+
+    .single-slider-content {
+        padding: 30px 15px;
+    }
+
+    .single-slider-content h1 {
+        font-size: 35px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+
+    .tmb-header-logo-img {
+        padding: 20px 10px 20px 0;
+    }
+
+    .tmb-header-logo-title {
+        padding: 48px 0;
+    }
+
+    .tmb-header-logo-title h1 {
+        font-size: 28px;
+    }
+
+    .tmb-header-logo-title p {
+        font-size: 14px;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+    .tmb-inner-section-header h1 {
+        font-size: 40px;
+        top: -20px;
+    }
+
+    .tmb-inner-section-header h2 {
+        font-size: 30px;
+    }
+
+    .tmb-header-logo-img {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .tmb-header-logo-img a {
+        display: inline-block;
+    }
+
+    .tmb-header-logo-title {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .tmb-header-slider.owl-theme .owl-nav {
+        display: none;
+    }
+    
+    .tmb-page-content-desc h2 {
+        font-size: 30px;
+    }
+    
+    .tmb-page-content-desc p {
+        font-size: 16px;
+    }
+    
+    .tmb-page-content-desc p.text-highlight {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    
+    .tmb-page-content-desc h4 {
+        font-size: 26px;
+    }
+    
+    .tmb-page-content-desc h6 {
+        font-size: 23px;
+    }
+    
+    .tmb-page-content-desc li {
+        font-size: 20px;
+        margin-left: 10px;
+        padding-left: 30px;
+    }
+
+    .tmb-client-page-img-area .col-sm-3 {
+        border-top: none;
+        border-right: 2px solid #eef2f5 !important;
+        border-bottom: 2px solid #eef2f5 !important;
+        border-left: 2px solid #eef2f5 !important;
+    }
+
+    .tmb-client-page-img-area .col-sm-3:first-child {
+        border-top: 2px solid #eef2f5 !important;
+    }
+    
+}
